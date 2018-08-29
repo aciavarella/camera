@@ -1,0 +1,18 @@
+<!-- <div id="app"> -->
+<p>by Angelo CIavarella</p>
+<div style="border: 1px solid; margin-bottom:10px;">
+	<video #video id="video" controls autoplay playinline [ngStyle]="getStyles()"></video>
+</div>
+<label><input type="checkbox" [checked]="blur" (change)="blur=!blur">blur</label>
+<label><input type="checkbox" [checked]="sepia" (change)="sepia=!sepia">sepia</label>
+<label><input type="checkbox" [checked]="invert" (change)="invert=!invert">invert</label>
+<label><input type="checkbox" [checked]="flipHorizontal" (change)="flipHorizontal=!flipHorizontal">Flip X</label>
+<label><input type="checkbox" [checked]="flipVertical" (change)="flipVertical=!flipVertical">Flip Y</label>
+<div><button id="snap" (click)="capture()">Take Photo</button></div>
+<canvas #canvas id="canvas"></canvas>
+<ul>
+	<li *ngFor="let c of captures">
+		<img src="{{c}}" height="50" />
+	</li>
+</ul>
+<!-- </div> -->
